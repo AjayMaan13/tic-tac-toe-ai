@@ -63,15 +63,6 @@ An unbeatable Tic-Tac-Toe AI that uses the Minimax algorithm with Alpha-Beta pru
 | **Nodes Explored** | 362,880 | 7,200 | **50x fewer** |
 | **User Experience** | Laggy | Instant | **Perfect** |
 
-## 🛠️ Technical Skills Used
-
-- **Python Programming** - Clean, readable, tested code
-- **Algorithm Implementation** - Translating theory to working code  
-- **GUI Development** - Interactive interface with Pygame
-- **Performance Analysis** - Measuring and improving speed
-- **Unit Testing** - Comprehensive test coverage
-- **Virtual Environments** - Proper dependency management
-
 ## 📁 Project Structure
 
 ```
@@ -85,40 +76,6 @@ tic-tac-toe-ai/
 └── tests/
     └── test_tictactoe.py       # Unit tests
 ```
-
-## 🧠 What I Learned
-
-### **Algorithm Design**
-- How AI "thinks" by exploring all possible futures
-- Why optimization matters - smart algorithms beat brute force
-- Recursive problem solving techniques
-
-### **Performance Engineering**  
-- Measuring bottlenecks with real data
-- Alpha-beta pruning reduces search space by 98%
-- Small optimizations can have massive impact
-
-### **Software Engineering**
-- Writing testable, maintainable code
-- Proper project structure and documentation
-- Version control and professional workflows
-
-## 🎯 Key Functions
-
-```python
-def minimax(board):              # Main AI decision maker
-def get_best_move():             # Alpha-beta optimization  
-def winner(board):               # Check win conditions
-def utility(board):              # Score final game states
-```
-
-## 🎓 Educational Value
-
-This project demonstrates:
-- ✅ **Fundamental AI algorithms** (Minimax, Alpha-Beta)
-- ✅ **Game theory principles** (Adversarial search, Optimal play)
-- ✅ **Performance optimization** (Algorithm analysis, Benchmarking)
-- ✅ **Software engineering** (Testing, Documentation, Structure)
 
 ## 🚀 Real-World Applications
 

@@ -1,0 +1,49 @@
+graph LR
+    Start([Game Start]) --> InitState[Initial State<br/>initial_state<br/>Empty 3x3 Board]
+    InitState --> CheckTerminal{Terminal?<br/>terminal board}
+    
+    CheckTerminal -->|Yes| CalcUtility[Utility<br/>+1/-1/0]
+    CalcUtility --> GameOver([Game Over])
+    
+    CheckTerminal -->|No| GetPlayer[Player<br/>X or O]
+    GetPlayer --> GetActions[Actions<br/>available moves]
+    
+    GetActions --> CheckPlayer{AI or<br/>Human?}
+    
+    CheckPlayer -->|AI| Minimax[Minimax<br/>Algorithm]
+    CheckPlayer -->|Human| WaitInput[Wait<br/>User Input]
+    
+    Minimax --> MaxMin{Maximizing<br/>or<br/>Minimizing?}
+    
+    MaxMin -->|X Max| MaxNode[Max Node<br/>Seek +1<br/>Alpha Prune]
+    MaxMin -->|O Min| MinNode[Min Node<br/>Seek -1<br/>Beta Prune]
+    
+    MaxNode --> SimActions[Simulate<br/>Actions]
+    MinNode --> SimActions
+    
+    SimActions --> Transition[Transition<br/>result board,action]
+    Transition --> RecursiveCall[Recursive<br/>Evaluation]
+    
+    RecursiveCall --> Backprop[Backpropagate<br/>Scores]
+    Backprop --> Prune{Prune?}
+    
+    Prune -->|Yes| ReturnBest[Return<br/>Best Move]
+    Prune -->|No| SimActions
+    
+    ReturnBest --> ApplyAction[Apply Action]
+    WaitInput --> ApplyAction
+    
+    ApplyAction --> NewState[New State]
+    NewState --> CheckTerminal
+    
+    style InitState fill:#e1f5ff
+    style CheckTerminal fill:#fff4e1
+    style CalcUtility fill:#ffe1e1
+    style GetPlayer fill:#e1ffe1
+    style GetActions fill:#e1ffe1
+    style Minimax fill:#f0e1ff
+    style Transition fill:#ffe1f5
+    style NewState fill:#e1f5ff
+    style GameOver fill:#ffe1e1
+    style MaxNode fill:#ffcccc
+    style MinNode fill:#ccccff

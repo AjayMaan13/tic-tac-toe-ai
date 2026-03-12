@@ -108,7 +108,7 @@ AI move time: 0.045 seconds
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License — see [LICENSE](LICENSE).
 
 ## 🙏 Acknowledgments
 
